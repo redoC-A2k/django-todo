@@ -12,7 +12,7 @@ mark_complete.short_description = "Mark selected tasks as complete"
 class TaskAdmin(admin.ModelAdmin):
     fields = [("content", "deadline"), "tags"]
 
-    list_display = ["content", "status", "deadline", "foo"]
+    list_display = ["content", "status", "deadline", "foo", "get_all_tags"]
     list_editable = ["status"]
     actions = [mark_complete]
     list_filter = ["status","deadline"]

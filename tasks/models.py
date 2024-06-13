@@ -27,3 +27,6 @@ class Task(models.Model):
     @property
     def foo(self):
         return 'bar'
+    
+    def get_all_tags(self, delimeter=','):
+        return delimeter.join([tag.name for tag in self.tags.all()])
